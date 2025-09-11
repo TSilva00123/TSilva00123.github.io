@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin-left: 150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+h3{
+    font-family: "Oswald", sans-serif;
+    color: #4F81BD;
+}
+.CV{
+    font-family: "Oswald", sans-serif;
+    color: #3E6398;
+}
