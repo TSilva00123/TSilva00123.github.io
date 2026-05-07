@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thiago Augusto Silva | Desenvolvedor & Especialista em IA</title>
-    <!-- Fontes: Poppins para títulos, Inter para corpo, Fira Code para o "toque de terminal" -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <!-- Ícones -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
@@ -14,10 +12,10 @@
         :root {
             --bg-color: #050505; 
             --bg-surface: #111111;
-            --primary: #00e5ff; /* Cyber Teal */
+            --primary: #00e5ff;
             --primary-glow: rgba(0, 229, 255, 0.2);
-            --secondary: #00ff88; /* Neon Green */
-            --ai-accent: #a855f7; /* Purple for AI */
+            --secondary: #00ff88;
+            --ai-accent: #a855f7;
             --text-main: #e2e8f0;
             --text-muted: #94a3b8;
             --glass-bg: rgba(17, 17, 17, 0.7);
@@ -47,7 +45,6 @@
             font-weight: 700;
         }
 
-        /* --- Infraestrutura / Grid Background --- */
         .grid-bg {
             position: fixed;
             top: 0;
@@ -74,7 +71,6 @@
             pointer-events: none;
         }
 
-        /* --- Glassmorphism / Componentes --- */
         .glass {
             background: var(--glass-bg);
             backdrop-filter: blur(10px);
@@ -91,7 +87,6 @@
             box-shadow: 0 8px 30px rgba(0, 229, 255, 0.08);
         }
 
-        /* --- Navegação --- */
         .navbar {
             position: fixed;
             top: 0;
@@ -153,7 +148,6 @@
             opacity: 1;
         }
 
-        /* --- Layout Principal --- */
         .container {
             max-width: 1100px;
             margin: 120px auto 0;
@@ -188,7 +182,6 @@
             font-size: 1.5rem;
         }
 
-        /* --- Hero --- */
         .hero {
             padding: 4rem 2rem;
             border-top: 3px solid var(--primary);
@@ -251,7 +244,6 @@
             background: linear-gradient(90deg, rgba(0,229,255,0.05) 0%, transparent 100%);
         }
 
-        /* --- Timeline --- */
         .timeline {
             position: relative;
             padding-left: 2rem;
@@ -324,7 +316,6 @@
             color: var(--ai-accent);
         }
 
-        /* --- Projetos --- */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -391,7 +382,6 @@
             border-top: 1px dashed var(--glass-border);
         }
 
-        /* --- Habilidades --- */
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -455,16 +445,14 @@
         .soft-skills-list i {
             color: var(--secondary);
             font-size: 1rem;
-            margin-top: 4px; /* Mantém o ícone alinhado com o topo do texto */
-            flex-shrink: 0; /* Impede o ícone de encolher */
+            margin-top: 4px;
+            flex-shrink: 0;
         }
         
-        /* Ajuste do texto para não quebrar a formatação */
         .soft-skills-list span {
             display: block;
         }
 
-        /* --- Footer --- */
         footer {
             text-align: center;
             padding: 2rem;
@@ -475,7 +463,6 @@
             font-size: 0.8rem;
         }
 
-        /* --- Responsividade --- */
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hero h1 { font-size: 2.5rem; }
@@ -620,7 +607,6 @@
                 
                 <div class="skill-category glass">
                     <h3><i class="fas fa-brain" style="color:var(--primary); margin-right:8px;"></i> Core Skills & Lógica</h3>
-                    <!-- AQUI ESTÁ A CORREÇÃO DA LISTA -->
                     <ul class="soft-skills-list">
                         <li>
                             <i class="fas fa-check"></i> 
@@ -649,7 +635,6 @@
     </footer>
 
     <script>
-        // --- Efeito de Digitação Terminal (Hero) ---
         const textElement = document.getElementById('typing-text');
         const phrases = ["Engenharia de Software", "Desenvolvedor Back-end", "Integração com IA", "Arquitetura de Sistemas"];
         let phraseIndex = 0;
@@ -672,7 +657,7 @@
 
             if (!isDeleting && charIndex === currentPhrase.length) {
                 isDeleting = true;
-                typeSpeed = 2000; // Tempo de pausa com a frase completa
+                typeSpeed = 2000;
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 phraseIndex = (phraseIndex + 1) % phrases.length;
@@ -684,7 +669,6 @@
 
         document.addEventListener('DOMContentLoaded', type);
 
-        // --- Animação de Revelação das Seções ---
         const secoes = document.querySelectorAll('.section');
         const navLinks = document.querySelectorAll('.nav-links a');
 
@@ -698,7 +682,6 @@
 
         secoes.forEach(secao => observer.observe(secao));
 
-        // --- Marcador do Menu Ativo Corrigido ---
         window.addEventListener('scroll', () => {
             let current = '';
             
@@ -719,7 +702,6 @@
             });
         });
 
-        // --- Efeito Mouse Glow (Server tracking) ---
         const blobBg = document.querySelector('.blob-bg');
         let mouseX = window.innerWidth / 2;
         let mouseY = window.innerHeight / 2;
@@ -743,7 +725,6 @@
         
         animateBlob(); 
 
-        // --- Scroll Suave ---
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
